@@ -1,0 +1,282 @@
+/* General Stuff */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #CFC6FF;
+    color: white;
+    position: relative;
+}
+
+/* Desktop Home section */
+
+@media (min-width: 601px) {
+    .home {
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .home-content {
+        float: left;
+        width: 50%;
+        margin: 2% 0 2% 5%;
+        max-width: clamp(20rem, 45vw, 50rem);
+    }
+
+    .home-image {
+        float: right;
+        width: 50%;
+        text-align: center;
+        max-width: 400px;
+        margin-right: 10%;
+        margin: 1% 10% 2% 0;
+    }
+
+    .home-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .home-socials {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* Header & Navigator */
+
+.header {
+    width: 100%;
+    padding: 3%;
+    background: linear-gradient(to bottom,#fff6b8, #CFC6FF);
+    position: relative;
+}
+
+.logo {
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(2rem , 1.67vw, 5rem);
+    font-weight: bold;
+    text-decoration: none;
+
+    left: 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar {
+    float: right;
+    margin-top: .1%;
+
+    right: 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar a {
+    font-size: clamp(1rem , 0.78vw, 2rem);
+    font-weight: bold;
+    margin: 10px;
+    color: #0000EE;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navbar a:hover, a.active {
+    color: #8F97E8;
+    border-bottom: 3px solid #8F97E8;
+}
+
+.hamburger-toggle, .hamburger-button {
+    display: none;
+}
+
+.hamburger-button {
+    font-size: 2rem;
+    cursor: pointer;
+    float: right;
+}
+
+/* Content General Design */
+
+.home-content > * {
+    margin-bottom: 2.5%;
+}
+
+.home-content h1 {
+    font-size: clamp(2.5rem , 3.33vw, 5rem);
+}
+
+.home-content h3 {
+    font-size: clamp(1.5rem , 1.67vw, 3rem);
+    color: #fdff98;
+}
+
+.home-content p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Button */
+
+.home-content .btn-box {
+    width: 130px;
+    height: 50px;
+}
+
+.btn-box a {
+    display: inline-block;
+    width: 130px;
+    height: inherit;
+    background: #7B84C9;
+    border: 5px solid #7B84C9;
+    border-radius: 8px;
+    color: #c3f6ff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    line-height: 37px;
+    transition: .3s;
+}
+
+/* Mobile Home section */
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10% 5%;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 200%;
+        right: 5%;
+        background: #fff6b8;
+        padding: 12px 18px;
+        border-radius: 14px;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        min-width: 150px;
+        z-index: 1000;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+    
+    /* Hamburger Button */
+
+    .hamburger-button {
+        display: block;
+        margin-top: .5%;
+        right: 5%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger-toggle:checked + .hamburger-button + .navbar {
+        right: 5%;
+        top: 200%;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .navbar a {
+        display: block;
+    }
+
+    /* Home section centering */
+
+    .home {
+        text-align: center;
+        margin: 40px;
+    }
+
+    .home-content {
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    .home-content h1 {
+        font-size: clamp(1.5rem , 7vw, 4rem);
+    }
+    .home-content h3 {
+        font-size: clamp(1rem , 5vw, 2.5rem);
+    }
+
+    .home-content p {
+        font-size: clamp(.8rem, 3vw, 1.5rem);
+    }
+
+    .home-image img {
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin: 20% auto;
+    }
+
+    .home-socials {
+        margin-top: 20%;
+    }
+
+    .btn-box {
+        margin: auto;
+    }
+}
