@@ -90,14 +90,15 @@ body {
 
 .logo {
     float: left;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: clamp(2rem , 1.67vw, 5rem);
+    font-weight: 900;
     text-decoration: none;
 
     left: 5%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    color: #0000EE;
 }
 
 .navbar {
@@ -292,6 +293,4 @@ body {
         margin: auto;
         padding-top: 1.5rem;
     }
-
 }
-
