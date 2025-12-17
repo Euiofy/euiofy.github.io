@@ -1,23 +1,19 @@
 /* General Stuff */
-@keyframes fadeUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translate(-50%, -40%);
     }
     to {
         opacity: 1;
-        transform: translate(-50%, -50%);
     }
 }
 
-@keyframes fadeDown {
+@keyframes fadeOut {
     from {
         opacity: 1;
-        transform: translateX(-50%) translateY(0);
     }
     to {
         opacity: 0;
-        transform: translateX(-50%) translateY(10px);
     }
 }
 
@@ -144,6 +140,7 @@ body {
 
 .home-content > * {
     margin-bottom: 2.5%;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .home-content h1 {
@@ -165,6 +162,11 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.home-socials {
+    animation: fadeIn 1s ease-out forwards;
 }
 
 /* Button */
@@ -289,5 +291,6 @@ body {
 
     .btn-box {
         margin: auto;
+        padding-top: 1.5rem;
     }
 }
