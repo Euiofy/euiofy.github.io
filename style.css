@@ -199,6 +199,7 @@ body {
     }
     .logo {
         font-size: 1.5rem;
+        font-weight: bold;
     }
 
     .navbar {
@@ -293,4 +294,5 @@ body {
         margin: auto;
         padding-top: 1.5rem;
     }
+
 }
