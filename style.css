@@ -90,9 +90,8 @@ body {
 
 .logo {
     float: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: clamp(2rem , 1.67vw, 5rem);
-    font-weight: bold;
     text-decoration: none;
 
     left: 5%;
@@ -199,7 +198,6 @@ body {
     }
     .logo {
         font-size: 1.5rem;
-        font-weight: bold;
     }
 
     .navbar {
@@ -296,3 +294,4 @@ body {
     }
 
 }
+
