@@ -336,10 +336,9 @@ body {
         margin-bottom: 10rem;
     }
 
-
-    .home-footer {
-        bottom: 0;
-        width: 100%;
+    .home-socials {
+        position: inline-block;
+        bottom: 1rem;
     }
 
     .btn-box {
