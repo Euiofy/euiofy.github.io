@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Euiofy's Portfolio - Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon-frieren.jpg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" />
+    <script>try { if (localStorage.getItem('dark') === 'true') document.documentElement.classList.add('dark'); } catch(e) {}</script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Euiofy<span aria-hidden="true">✦</span></a>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="notes.html" aria-current="page">Notes</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
+    </header>
+    <main class="inner-page diary-ideas">
+        <div class="page-intro">
+            <div><p class="eyebrow">✿ thoughts in progress</p><h1>My little notebook<span class="heading-star" aria-hidden="true">✦</span></h1></div>
+            <img class="mini-frieren" src="images/icon-frieren.jpg" alt="Frieren" />
+        </div>
+        <section class="text-section ideas">
+            <h2>Ideas to improve the website</h2>
+            <ol><li>Save &amp; dated/timed notes</li><li>New note</li><li>Delete a note feature</li><li>More Frieren <span aria-hidden="true">♡</span></li></ol>
+        </section>
+        <section class="text-section thoughts">
+            <h2>Thoughts</h2>
+            <p>This website is more of a personal notebook than any other thing I've done. I put all of me in this project to express myself. This is a great success on putting it together.</p>
+        </section>
+        <section class="text-section notes-section">
+            <div class="notes-heading"><h2><label for="notes-textarea">Your notes</label></h2><span id="save-status" role="status">Saved on this device</span></div>
+            <textarea id="notes-textarea" placeholder="Write your notes here..." spellcheck="true"></textarea>
+            <p class="note-hint">Just for you! Your notes stay in this browser.</p>
+        </section>
+    </main>
+    <footer class="footer"><span>Made by Euiofy <span aria-hidden="true">♡</span></span><span class="footer-divider" aria-hidden="true">✧</span><span> a work in progress</span></footer>
+    <script src="script.js"></script>
+</body>
+</html>
